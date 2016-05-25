@@ -18,6 +18,9 @@
 		BA4339EE1CF35B7F00927819 /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4339ED1CF35B7F00927819 /* MyCollectionViewController.m */; };
 		BA4339F11CF3691000927819 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4339F01CF3691000927819 /* MyCollectionViewCell.m */; };
 		BA4339F41CF3804200927819 /* Modal.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4339F31CF3804200927819 /* Modal.m */; };
+		BA79BB5D1CF4F6E000D12874 /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = BA79BB5C1CF4F6E000D12874 /* Theatre.m */; };
+		BA8549261CF4B5F4002B8CA3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8549251CF4B5F4002B8CA3 /* MapKit.framework */; };
+		BA8549291CF4B7AC002B8CA3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8549281CF4B7AC002B8CA3 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,12 @@
 		BA4339F01CF3691000927819 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		BA4339F21CF3804200927819 /* Modal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Modal.h; sourceTree = "<group>"; };
 		BA4339F31CF3804200927819 /* Modal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Modal.m; sourceTree = "<group>"; };
+		BA79BB5A1CF4CE0000D12874 /* Toronto.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Toronto.gpx; sourceTree = "<group>"; };
+		BA79BB5B1CF4F6E000D12874 /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatre.h; sourceTree = "<group>"; };
+		BA79BB5C1CF4F6E000D12874 /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatre.m; sourceTree = "<group>"; };
+		BA8549251CF4B5F4002B8CA3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BA8549271CF4B7AC002B8CA3 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		BA8549281CF4B7AC002B8CA3 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA8549261CF4B5F4002B8CA3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +100,7 @@
 		BA4339AA1CF3597300927819 = {
 			isa = PBXGroup;
 			children = (
+				BA8549251CF4B5F4002B8CA3 /* MapKit.framework */,
 				BA4339B51CF3597300927819 /* RottenMangoes */,
 				BA4339CF1CF3597300927819 /* RottenMangoesTests */,
 				BA4339DA1CF3597300927819 /* RottenMangoesUITests */,
@@ -118,6 +129,11 @@
 				BA4339F31CF3804200927819 /* Modal.m */,
 				BA4339BC1CF3597300927819 /* ViewController.h */,
 				BA4339BD1CF3597300927819 /* ViewController.m */,
+				BA8549271CF4B7AC002B8CA3 /* MapViewController.h */,
+				BA8549281CF4B7AC002B8CA3 /* MapViewController.m */,
+				BA79BB5B1CF4F6E000D12874 /* Theatre.h */,
+				BA79BB5C1CF4F6E000D12874 /* Theatre.m */,
+				BA79BB5A1CF4CE0000D12874 /* Toronto.gpx */,
 				BA4339BF1CF3597300927819 /* Main.storyboard */,
 				BA4339EF1CF3691000927819 /* MyCollectionViewCell.h */,
 				BA4339F01CF3691000927819 /* MyCollectionViewCell.m */,
@@ -289,11 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA4339EE1CF35B7F00927819 /* MyCollectionViewController.m in Sources */,
+				BA79BB5D1CF4F6E000D12874 /* Theatre.m in Sources */,
 				BA4339BE1CF3597300927819 /* ViewController.m in Sources */,
 				BA4339BB1CF3597300927819 /* AppDelegate.m in Sources */,
 				BA4339F41CF3804200927819 /* Modal.m in Sources */,
 				BA4339B81CF3597300927819 /* main.m in Sources */,
 				BA4339F11CF3691000927819 /* MyCollectionViewCell.m in Sources */,
+				BA8549291CF4B7AC002B8CA3 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +537,7 @@
 				BA4339E21CF3597300927819 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA4339E31CF3597300927819 /* Build configuration list for PBXNativeTarget "RottenMangoesTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +546,7 @@
 				BA4339E51CF3597300927819 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA4339E61CF3597300927819 /* Build configuration list for PBXNativeTarget "RottenMangoesUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +555,7 @@
 				BA4339E81CF3597300927819 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

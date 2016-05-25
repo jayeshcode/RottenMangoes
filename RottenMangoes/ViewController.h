@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "Modal.h"
+#import "MapViewController.h"
 
 @interface ViewController : UIViewController
 @property (nonatomic,strong)Modal *data;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelview;
+
+
+- (IBAction)actionbutton:(id)sender;
+
+
 @end
 
