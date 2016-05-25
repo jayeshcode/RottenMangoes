@@ -8,11 +8,13 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,5 +30,36 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)actionbutton:(id)sender {
+
+
+    [self performSegueWithIdentifier:@"map" sender:self];
+
+
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"map"]) {
+        
+        
+               
+      MapViewController *controler = (MapViewController *)[segue destinationViewController];
+        
+        controler.data = self.data;
+        
+        
+        
+        
+    }
+    
+    
+    
+}
+
 
 @end

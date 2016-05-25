@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cIb-g5-8oU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cIb-g5-8oU">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -107,6 +107,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhc-pl-Zlv">
+                                <rect key="frame" x="277" y="471" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="actionbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y6n-YO-Rdh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -118,8 +125,10 @@
                             <constraint firstItem="giJ-bL-M0m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MSU-L4-qZc"/>
                             <constraint firstItem="27K-KS-oLd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SUp-SP-2rb"/>
                             <constraint firstItem="sQQ-HE-QqU" firstAttribute="leading" secondItem="27K-KS-oLd" secondAttribute="leading" id="eXN-dM-t92"/>
+                            <constraint firstItem="rhc-pl-Zlv" firstAttribute="top" secondItem="sQQ-HE-QqU" secondAttribute="bottom" constant="84" id="fdS-yf-ASx"/>
                             <constraint firstItem="sQQ-HE-QqU" firstAttribute="top" secondItem="giJ-bL-M0m" secondAttribute="bottom" constant="65" id="pG7-1l-4Iz"/>
                             <constraint firstItem="sQQ-HE-QqU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="s4z-YN-uXD"/>
+                            <constraint firstItem="rhc-pl-Zlv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ueR-gW-7da"/>
                             <constraint firstItem="sQQ-HE-QqU" firstAttribute="leading" secondItem="giJ-bL-M0m" secondAttribute="leading" id="xIN-Yx-0ke"/>
                             <constraint firstItem="gVF-8k-SOV" firstAttribute="top" secondItem="27K-KS-oLd" secondAttribute="bottom" constant="8" symbolic="YES" id="xqg-HX-8lc"/>
                         </constraints>
@@ -127,11 +136,59 @@
                     <navigationItem key="navigationItem" id="g0R-rW-req"/>
                     <connections>
                         <outlet property="labelview" destination="27K-KS-oLd" id="Luu-jp-Enm"/>
+                        <segue destination="OIs-du-KTQ" kind="show" identifier="map" id="5ND-8s-gV6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709" y="489"/>
+            <point key="canvasLocation" x="1437" y="511"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="uW7-hz-T5j">
+            <objects>
+                <viewController id="OIs-du-KTQ" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9lf-V9-Xph"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nme-Yn-Vuf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kCV-2a-wT9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-aJ-6BM">
+                                <rect key="frame" x="30" y="74" width="520" height="426"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="mJM-Y7-XvP"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mJM-Y7-XvP"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZUc-nj-eud">
+                                <rect key="frame" x="0.0" y="64" width="240" height="81"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GbS-aJ-6BM" firstAttribute="top" secondItem="9lf-V9-Xph" secondAttribute="bottom" constant="10" id="3v0-LA-0Iv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GbS-aJ-6BM" secondAttribute="trailing" constant="30" id="Vvv-2x-2FY"/>
+                            <constraint firstItem="Nme-Yn-Vuf" firstAttribute="top" secondItem="GbS-aJ-6BM" secondAttribute="bottom" constant="100" id="gNu-QN-BUO"/>
+                            <constraint firstItem="GbS-aJ-6BM" firstAttribute="leading" secondItem="kCV-2a-wT9" secondAttribute="leadingMargin" constant="10" id="gck-AT-b5a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapview" destination="GbS-aJ-6BM" id="ria-z8-QWR"/>
+                        <outlet property="textview" destination="ZUc-nj-eud" id="lNE-ky-zVS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hnl-0o-XtU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2128" y="523"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CiA-Js-02U">
